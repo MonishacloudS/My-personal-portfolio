@@ -114,6 +114,67 @@ img {
     box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.about,
+.achievements,
+.skills,
+.work,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.achievements .achieve-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: black;
+    padding: 0 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
 /* Navbar */
 
 .nav {
@@ -390,7 +451,7 @@ img {
     width: 60%;
 }
 
-/* work */
+
 .work {
     text-align: center;
 }
@@ -414,6 +475,81 @@ img {
     transform: scale(1.1);
 
 }
+
+/* work section styling */
+.work .title::after {
+    content: "few of my works";
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+
+}
+
+.work .grid-container .card {
+    height: 420px;
+    background: whitesmoke;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+
+}
+
+.work .grid-container .card:hover {
+    background: lightgrey;
+}
+
+.work .grid-container .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.work .grid-container .card:hover .box {
+    transform: scale(1.05);
+}
+
+.work .grid-container .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.techUsed {
+    color: grey;
+}
+
+.PLink,
+.PGit {
+    height: 40px !important;
+    width: 40px !important;
+    border: none !important;
+
+}
+
+.work .grid-container .card img {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid lightblue;
+    transition: all 0.3s ease;
+
+}
+
+.work .grid-container .card:hover img {
+    border-color: #fff;
+}
+
 
 /* contact */
 .control_input {
